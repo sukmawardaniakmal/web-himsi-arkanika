@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIMSI - Kabinet Arka Nika</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Konfigurasi Tailwind untuk memakai Poppins sebagai Font Utama -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+ <!-- NAVBAR / HEADER -->
+  <header class="bg-indigo-900 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
+      
+      <!-- LOGO & JUDUL KABINET -->
+      <div class="flex items-center gap-3">
+        <!-- Logo HIMSI -->
+        <img src="logo-himsi.png" alt="Logo HIMSI" class="h-10 w-auto object-contain">
+        
+        <!-- Garis Pemisah Tipis -->
+        <div class="h-8 w-[1px] bg-indigo-700 hidden sm:block"></div>
+        
+        <!-- Logo Kabinet -->
+        <img src="logo-kabinet.png" alt="Logo Arka Nika" class="h-10 w-auto object-contain">
+
+        <!-- Teks Teks Nama Kabinet -->
+        <div class="ml-1">
+          <h1 class="text-xl font-bold tracking-wide leading-tight">HIMSI</h1>
+          <p class="text-xs text-indigo-200">Kabinet Arka Nika</p>
+        </div>
+      </div>
+
+      <!-- MENU NAVIGASI -->
+      <nav class="flex gap-2 bg-indigo-950 p-1 rounded-lg">
+        <button onclick="showPage('home')" id="btn-home" class="nav-btn px-4 py-2 rounded-md text-sm font-medium transition bg-indigo-600 text-white">Beranda</button>
+        <button onclick="showPage('pengurus')" id="btn-pengurus" class="nav-btn px-4 py-2 rounded-md text-sm font-medium transition text-indigo-200 hover:text-white hover:bg-indigo-800">Data Pengurus</button>
+        <button onclick="showPage('proker')" id="btn-proker" class="nav-btn px-4 py-2 rounded-md text-sm font-medium transition text-indigo-200 hover:text-white hover:bg-indigo-800">Program Kerja</button>
+      </nav>
+
+    </div>
+  </header>
+  <!-- KONTEN UTAMA -->
+  <main class="max-w-6xl mx-auto px-4 py-8">
+
+    <!-- HALAMAN BERANDA / HOME -->
+    <section id="page-home" class="space-y-8">
+      
+     <!-- HERO BANNER -->
+      <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-blue-900 text-white p-8 md:p-12 rounded-3xl shadow-xl text-center space-y-4">
+        
+        <!-- LOGO KABINET DI HERO BANNER -->
+        <div class="flex justify-center mb-2">
+          <img src="logo-kabinet.png" alt="Logo Kabinet Arka Nika" class="h-20 md:h-24 w-auto object-contain drop-shadow-md">
+        </div>
+
+        <div>
+          <span class="bg-indigo-700/60 text-indigo-200 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-indigo-500/30">Portal Resmi</span>
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">HIMSI Kabinet Arka Nika</h2>
+        <p class="text-indigo-100 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+          Pusat informasi internal HIMSI. Wadah bertumbuh, berinovasi, dan melangkah bersama menuju masa depan yang berdampak.
+        </p>
+      </div>
+
+      <!-- MAKNA NAMA KABINET -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-slate-800 border-l-4 border-indigo-600 pl-3">Makna Nama Kabinet</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- ARKA -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-2xl font-extrabold text-indigo-900">ARKA</h4>
+              <span class="text-xs font-semibold px-3 py-1 bg-amber-100 text-amber-800 rounded-full">Sansekerta</span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Bermakna <strong class="text-slate-800">cahaya, matahari, atau sinar penerang</strong>. Dalam konteks organisasi, Arka merepresentasikan peran HIMSI sebagai sumber energi, inspirasi, dan solusi yang menerangi permasalahan mahasiswa Sistem Informasi.
+            </p>
+          </div>
+
+          <!-- NIKA -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-2xl font-extrabold text-indigo-900">NIKA</h4>
+              <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Yunani</span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Merujuk pada <strong class="text-slate-800">Dewa Matahari serta simbol kegembiraan dan kebebasan</strong>. Nika dimaknai sebagai tujuan akhir dari setiap proses organisasi: keberhasilan bersama, pertumbuhan kolektif, dan kebebasan berekspresi.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FILOSOFI ELEMEN LOGO -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-slate-800 border-l-4 border-indigo-600 pl-3">Filosofi Elemen Logo</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Elemen 1: Layar Abstrak -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-between p-2 font-bold text-lg mb-3">⛵</div>
+            <h4 class="font-bold text-slate-800 text-base">Bentuk Layar Abstrak</h4>
+            <p class="text-xs font-semibold text-indigo-600">Elemen Utama Arka</p>
+            <p class="text-slate-600 text-xs leading-relaxed pt-1">
+              Bentuk melengkung menyerupai layar yang mengarah ke atas melambangkan Arka sebagai cahaya dan energi penggerak organisasi. Tempat bertumbuh dan berlayar bersama menuju perubahan positif.
+            </p>
+          </div>
+
+          <!-- Elemen 2: Bintang Kompas -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-between p-2 font-bold text-lg mb-3">🧩</div>
+            <h4 class="font-bold text-slate-800 text-base">Bintang Kompas</h4>
+            <p class="text-xs font-semibold text-indigo-600">Elemen Inti Nika</p>
+            <p class="text-slate-600 text-xs leading-relaxed pt-1">
+              Merepresentasikan Nika sebagai kemenangan dan tujuan akhir organisasi. Menegaskan bahwa setiap langkah HIMSI diarahkan pada kemenangan yang bermakna dan berkelanjutan.
+            </p>
+          </div>
+
+          <!-- Elemen 3: Jarum Kompas Tepi -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-between p-2 font-bold text-lg mb-3">🧭</div>
+            <h4 class="font-bold text-slate-800 text-base">Jarum Kompas Tepi</h4>
+            <p class="text-xs font-semibold text-indigo-600">Arah Kepemimpinan</p>
+            <p class="text-slate-600 text-xs leading-relaxed pt-1">
+              Jarum kompas kecil yang tersebar di pinggir melambangkan peran kepemimpinan dan sistem yang mengarahkan, bukan mendominasi.
+            </p>
+          </div>
+
+          <!-- Elemen 4: Garis Lingkaran Putus -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-between p-2 font-bold text-lg mb-3">🔄</div>
+            <h4 class="font-bold text-slate-800 text-base">Garis Lingkaran Putus</h4>
+            <p class="text-xs font-semibold text-indigo-600">Proses Dinamika</p>
+            <p class="text-slate-600 text-xs leading-relaxed pt-1">
+              Lingkaran yang tidak utuh melambangkan perjalanan organisasi yang dinamis dan terus berkembang.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FILOSOFI WARNA -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-slate-800 border-l-4 border-indigo-600 pl-3">Filosofi Warna</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Warna Biru Tua -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-700 flex-shrink-0 shadow-inner"></div>
+            <div>
+              <h4 class="font-bold text-slate-800 text-sm">Biru Tua</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Intelektualitas • Teknologi • Keteguhan</p>
+            </div>
+          </div>
+
+          <!-- Warna Biru Muda -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-400 flex-shrink-0 shadow-inner"></div>
+            <div>
+              <h4 class="font-bold text-slate-800 text-sm">Biru Muda</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Inovasi • Keterbukaan • Transformasi</p>
+            </div>
+          </div>
+
+          <!-- Warna Kuning / Emas -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-400 flex-shrink-0 shadow-inner"></div>
+            <div>
+              <h4 class="font-bold text-slate-800 text-sm">Kuning / Emas</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Kemenangan • Kejayaan • Nilai Luhur</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- QUICK ACCESS BUTTONS -->
+      <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <button onclick="showPage('pengurus')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-4 rounded-xl font-semibold shadow-md transition flex items-center justify-between">
+          <span>👥 Akses Data Pengurus</span>
+          <span>→</span>
+        </button>
+        <button onclick="showPage('proker')" class="w-full bg-slate-800 hover:bg-slate-900 text-white p-4 rounded-xl font-semibold shadow-md transition flex items-center justify-between">
+          <span>📅 Akses Program Kerja</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </section>
+
+<!-- HALAMAN DATA PENGURUS -->
+    <section id="page-pengurus" class="hidden space-y-6">
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">Data Pengurus</h2>
+          <p class="text-slate-500 text-sm">Daftar pengurus aktif HIMSI Kabinet Arka Nika 2026-2027</p>
+        </div>
+      </div>
+
+      <!-- TABEL DATA PENGURUS -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-slate-100 text-slate-700 font-semibold uppercase text-xs">
+              <tr>
+                <th class="p-4 border-b">No</th>
+                <th class="p-4 border-b">Nama Lengkap</th>
+                <th class="p-4 border-b">NIM</th>
+                <th class="p-4 border-b">Jabatan & Departemen</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              
+              <!-- EXECUTIVE BOARD -->
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">1</td><td class="p-4 font-semibold text-slate-800">Ali Rahmi Rafsanjani</td><td class="p-4 text-slate-600">243100400</td><td class="p-4"><span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Ketua Umum (Executive Board)</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">2</td><td class="p-4 font-semibold text-slate-800">Ranta Agung Ramadhan</td><td class="p-4 text-slate-600">243100392</td><td class="p-4"><span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Wakil Ketua Umum (Executive Board)</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">3</td><td class="p-4 font-semibold text-slate-800">Moh. Akmal Sukma Wardani</td><td class="p-4 text-slate-600">243100411</td><td class="p-4"><span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Sekretaris Umum I (Executive Board)</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">4</td><td class="p-4 font-semibold text-slate-800">Melisah Salsa Bila</td><td class="p-4 text-slate-600">253100455</td><td class="p-4"><span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Sekretaris Umum II (Executive Board)</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">5</td><td class="p-4 font-semibold text-slate-800">Octavia Nur Khasanah</td><td class="p-4 text-slate-600">243100418</td><td class="p-4"><span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Bendahara Umum I (Executive Board)</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">6</td><td class="p-4 font-semibold text-slate-800">Khairunisa Hasna Sukrandono</td><td class="p-4 text-slate-600">253100439</td><td class="p-4"><span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">Bendahara Umum II (Executive Board)</span></td></tr>
+
+              <!-- RESEARCH & TECHNOLOGY -->
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">7</td><td class="p-4 font-semibold text-slate-800">Gamblang Falah Fiqih</td><td class="p-4 text-slate-600">243100407</td><td class="p-4"><span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Kepala Departemen - Research & Technology</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">8</td><td class="p-4 font-semibold text-slate-800">Tyas Fitri Nurrochmah</td><td class="p-4 text-slate-600">243100395</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Research & Technology</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">9</td><td class="p-4 font-semibold text-slate-800">Kharisma Yogi Meiana</td><td class="p-4 text-slate-600">243100410</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Research & Technology</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">10</td><td class="p-4 font-semibold text-slate-800">Amadeus Defrino Putera Manggar</td><td class="p-4 text-slate-600">253100431</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Research & Technology</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">11</td><td class="p-4 font-semibold text-slate-800">Efansyah Purnomo Ariadin</td><td class="p-4 text-slate-600">253100436</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Research & Technology</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">12</td><td class="p-4 font-semibold text-slate-800">Alfarizi Nur Ramadhani</td><td class="p-4 text-slate-600">243100430</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Research & Technology</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">13</td><td class="p-4 font-semibold text-slate-800">Umi Saidah</td><td class="p-4 text-slate-600">253100448</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Research & Technology</span></td></tr>
+
+              <!-- MEDIA & INFORMATION -->
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">14</td><td class="p-4 font-semibold text-slate-800">Jofand Muhammad Adam Astsaqif</td><td class="p-4 text-slate-600">243100409</td><td class="p-4"><span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Kepala Departemen - Media & Information</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">15</td><td class="p-4 font-semibold text-slate-800">Moh. Jailani</td><td class="p-4 text-slate-600">243100390</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Media & Information</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">16</td><td class="p-4 font-semibold text-slate-800">Muhammad Fahroel Cahya Raditya</td><td class="p-4 text-slate-600">253100457</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Media & Information</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">17</td><td class="p-4 font-semibold text-slate-800">Muhammad Ulilazmi Aji Setya</td><td class="p-4 text-slate-600">253100441</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Media & Information</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">18</td><td class="p-4 font-semibold text-slate-800">Jesa Fara Atta Gavrila</td><td class="p-4 text-slate-600">253100438</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Media & Information</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">19</td><td class="p-4 font-semibold text-slate-800">Angga Setya Hidayatulloh</td><td class="p-4 text-slate-600">243100432</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Media & Information</span></td></tr>
+
+              <!-- SOCIAL & RELIGIOUS -->
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">20</td><td class="p-4 font-semibold text-slate-800">Ananda Virginia Rezky Nasution</td><td class="p-4 text-slate-600">243100402</td><td class="p-4"><span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Kepala Departemen - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">21</td><td class="p-4 font-semibold text-slate-800">Maylani Setianingrum</td><td class="p-4 text-slate-600">243100427</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">22</td><td class="p-4 font-semibold text-slate-800">Syira Fadilah</td><td class="p-4 text-slate-600">243100421</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">23</td><td class="p-4 font-semibold text-slate-800">Febrian Pandia Parameswara</td><td class="p-4 text-slate-600">253100453</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">24</td><td class="p-4 font-semibold text-slate-800">Talitha Syifa Salsabila</td><td class="p-4 text-slate-600">243100394</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">25</td><td class="p-4 font-semibold text-slate-800">Afifah Putri Maharani</td><td class="p-4 text-slate-600">243100397</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">26</td><td class="p-4 font-semibold text-slate-800">Tahta Jamilatun Khasanah</td><td class="p-4 text-slate-600">253100447</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">27</td><td class="p-4 font-semibold text-slate-800">Anjani Husen</td><td class="p-4 text-slate-600">253100451</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">28</td><td class="p-4 font-semibold text-slate-800">Gusnita Eliana Dewi</td><td class="p-4 text-slate-600">243100437</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">29</td><td class="p-4 font-semibold text-slate-800">Salsabillah</td><td class="p-4 text-slate-600">253100445</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Social & Religious</span></td></tr>
+
+              <!-- ORGANIZATIONAL DEVELOPMENT -->
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">30</td><td class="p-4 font-semibold text-slate-800">Muhammad Adhytia Pangestu</td><td class="p-4 text-slate-600">243100413</td><td class="p-4"><span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Kepala Departemen - Organizational Development</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">31</td><td class="p-4 font-semibold text-slate-800">Muhammad Ikmal Abdulsalam</td><td class="p-4 text-slate-600">243100417</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Organizational Development</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">32</td><td class="p-4 font-semibold text-slate-800">Abdulmumeen Opeyemi</td><td class="p-4 text-slate-600">243100424</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Organizational Development</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">33</td><td class="p-4 font-semibold text-slate-800">Muhammad Faiz Shonif Ubaidillah</td><td class="p-4 text-slate-600">243100416</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Organizational Development</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">34</td><td class="p-4 font-semibold text-slate-800">Muhammad Ahnaf Hanafi</td><td class="p-4 text-slate-600">243100414</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Organizational Development</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">35</td><td class="p-4 font-semibold text-slate-800">Dedi Arifin</td><td class="p-4 text-slate-600">243100404</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Organizational Development</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">36</td><td class="p-4 font-semibold text-slate-800">Luthfikal Hanif Falih</td><td class="p-4 text-slate-600">243100389</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Organizational Development</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">37</td><td class="p-4 font-semibold text-slate-800">Hafizh Ulum</td><td class="p-4 text-slate-600">243100426</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Organizational Development</span></td></tr>
+              <tr class="hover:bg-slate-50"><td class="p-4 font-medium text-slate-400">38</td><td class="p-4 font-semibold text-slate-800">Yumna Fatin Rafifah</td><td class="p-4 text-slate-600">253100460</td><td class="p-4"><span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold">Staf - Organizational Development</span></td></tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  <!-- HALAMAN PROGRAM KERJA -->
+    <section id="page-proker" class="hidden space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-800">Program Kerja</h2>
+        <p class="text-slate-500 text-sm">Daftar program kerja bulanan dan tahunan seluruh departemen HIMSI Kabinet Arka Nika</p>
+      </div>
+
+      <!-- ================= PROGRAM BULANAN ================= -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-slate-800 border-l-4 border-indigo-600 pl-3">A. Program Bulanan</h3>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-slate-100 text-slate-700 font-semibold uppercase text-xs">
+                <tr>
+                  <th class="p-4 border-b">Departemen</th>
+                  <th class="p-4 border-b">Nama Program</th>
+                  <th class="p-4 border-b">Deskripsi Singkat</th>
+                  <th class="p-4 border-b">Waktu</th>
+                  <th class="p-4 border-b">PIC</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <!-- EXECUTIVE BOARD -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="5">Executive Board</td><td class="p-4 font-semibold">Rapat Bulanan</td><td class="p-4 text-xs text-slate-600">Koordinasi rutin antar pengurus inti (EB) untuk monitoring progres kinerja.</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Ranta Agung R.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Inventarisasi Surat</td><td class="p-4 text-xs text-slate-600">Pendataan dan perawatan aset organisasi serta rekapitulasi arsip surat.</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Akmal Sukma W.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">HIMSI Digital Administration</td><td class="p-4 text-xs text-slate-600">Mengelola database cloud (Google Drive) arsip dokumen dan data pengurus.</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Melisah Salsa B.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Persuratan & Proposal</td><td class="p-4 text-xs text-slate-600">Melayani kebutuhan kesekretariatan dan penerbitan surat resmi/proposal.</td><td class="p-4 text-xs">Kondisional</td><td class="p-4 text-xs">Akmal Sukma W.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Pencatatan Keuangan</td><td class="p-4 text-xs text-slate-600">Pengelolaan kas pusat organisasi melalui pencatatan transaksi (cashflow).</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Octavia Nurkhasanah</td></tr>
+
+                <!-- RESEARCH & TECHNOLOGY -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="2">Research & Technology</td><td class="p-4 font-semibold">Ristech Academy</td><td class="p-4 text-xs text-slate-600">Program pembinaan dan pengembangan kompetensi riset & teknologi.</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Kharisma & Tyas</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Mabres</td><td class="p-4 text-xs text-slate-600">Program penghargaan bagi mahasiswa berprestasi akademik & non-akademik.</td><td class="p-4 text-xs">Bulanan</td><td class="p-4 text-xs">Alfa & Aida</td></tr>
+
+                <!-- MEDIA & INFORMATION -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="6">Media & Information</td><td class="p-4 font-semibold">Ulang Tahun Pengurus</td><td class="p-4 text-xs text-slate-600">Membuat Poster Recap Ulang Tahun Bulanan (Feed).</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Muhammad Ulil A.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">PHBI / PHBN</td><td class="p-4 text-xs text-slate-600">Membuat Poster Peringatan Hari Besar (Feed).</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Jofand Muhammad</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">HIMSI Say</td><td class="p-4 text-xs text-slate-600">Membuat Poster Daily Quote (Story).</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Muhammad Fahroel</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Forum Aspirasi & NGL2</td><td class="p-4 text-xs text-slate-600">Membuat forum online untuk menampung aspirasi dan quotes anggota.</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Moh. Jailani</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Konten Event</td><td class="p-4 text-xs text-slate-600">Membuat Konten Event berupa Video/foto (Reels).</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Jesa Farah</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Dokumentasi Kegiatan</td><td class="p-4 text-xs text-slate-600">Mendokumentasikan seluruh kegiatan kabinet 2026/2027.</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Angga Setya</td></tr>
+
+                <!-- SOCIAL & RELIGIOUS -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="3">Social & Religious</td><td class="p-4 font-semibold">Menyebar Poster Jum'at</td><td class="p-4 text-xs text-slate-600">Menyampaikan informasi dan pesan positif melalui media sosial.</td><td class="p-4 text-xs">Setiap Jumat</td><td class="p-4 text-xs">Afifah Putri M.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Baksos Bersih Pantai</td><td class="p-4 text-xs text-slate-600">Kegiatan kepedulian lingkungan untuk menjaga kebersihan ekosistem.</td><td class="p-4 text-xs">6 bulan sekali</td><td class="p-4 text-xs">Salsabila</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Doa Selesai Acara</td><td class="p-4 text-xs text-slate-600">Menutup setiap kegiatan organisasi dengan doa bersama.</td><td class="p-4 text-xs">Setiap Acara</td><td class="p-4 text-xs">Thalitha Syifa</td></tr>
+
+                <!-- ORGANIZATIONAL DEVELOPMENT -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="2">Organizational Development</td><td class="p-4 font-semibold">Fun Play</td><td class="p-4 text-xs text-slate-600">Kegiatan non-akademik bermain futsal, badminton, tenis meja, dsb.</td><td class="p-4 text-xs">2 kali/bulan</td><td class="p-4 text-xs">Abdul & Ikmal</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Esport</td><td class="p-4 text-xs text-slate-600">Mengelola, membentuk tim, dan mengikuti/mengadakan lomba esport.</td><td class="p-4 text-xs">1 kali/bulan</td><td class="p-4 text-xs">Falih & Hanafi</td></tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= PROGRAM TAHUNAN ================= -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-xl font-bold text-slate-800 border-l-4 border-indigo-600 pl-3">B. Program Tahunan</h3>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-slate-100 text-slate-700 font-semibold uppercase text-xs">
+                <tr>
+                  <th class="p-4 border-b">Departemen</th>
+                  <th class="p-4 border-b">Nama Program</th>
+                  <th class="p-4 border-b">Deskripsi Singkat</th>
+                  <th class="p-4 border-b">Waktu</th>
+                  <th class="p-4 border-b">PIC</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <!-- EXECUTIVE BOARD -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="4">Executive Board</td><td class="p-4 font-semibold">Pengesahan Proker & Raker</td><td class="p-4 text-xs text-slate-600">Rapat kerja di awal periode untuk menetapkan rencana kerja departemen.</td><td class="p-4 text-xs">Awal Periode</td><td class="p-4 text-xs">Ali Rahmi R.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Musyawarah Besar (Mubes)</td><td class="p-4 text-xs text-slate-600">Penyampaian LPJ akhir kepengurusan dan evaluasi AD/ART.</td><td class="p-4 text-xs">Akhir Periode</td><td class="p-4 text-xs">Ali Rahmi R.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Sistem Penomoran Surat</td><td class="p-4 text-xs text-slate-600">Membakukan kode indeks dan mekanisme penomoran surat organisasi.</td><td class="p-4 text-xs">1 Periode</td><td class="p-4 text-xs">Melisah Salsa B.</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Tabungan Cadangan Kas</td><td class="p-4 text-xs text-slate-600">Pengelolaan dana cadangan guna memperkuat stabilitas finansial.</td><td class="p-4 text-xs">1 Periode</td><td class="p-4 text-xs">Khoerunisa Hasna</td></tr>
+
+                <!-- RESEARCH & TECHNOLOGY -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900">Research & Technology</td><td class="p-4 font-semibold">Kunjungan Industri</td><td class="p-4 text-xs text-slate-600">Menghubungkan teori kampus dengan penerapannya di dunia industri digital.</td><td class="p-4 text-xs">1 kali/kepengurusan</td><td class="p-4 text-xs">Defrin & Evan</td></tr>
+
+                <!-- MEDIA & INFORMATION -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="3">Media & Information</td><td class="p-4 font-semibold">Foto Pengurus Himpunan</td><td class="p-4 text-xs text-slate-600">Sesi pemotretan resmi setiap departemen.</td><td class="p-4 text-xs">1 kali/kepengurusan</td><td class="p-4 text-xs">Jofand Muhammad</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Design Logo Kabinet</td><td class="p-4 text-xs text-slate-600">Perancangan dan pembuatan identitas visual logo kabinet.</td><td class="p-4 text-xs">1 kali/kepengurusan</td><td class="p-4 text-xs">Jofand Muhammad</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Short Movie</td><td class="p-4 text-xs text-slate-600">Pembuatan film pendek spesial kabinet.</td><td class="p-4 text-xs">1 kali/kepengurusan</td><td class="p-4 text-xs">Jofand Muhammad</td></tr>
+
+                <!-- SOCIAL & RELIGIOUS -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="5">Social & Religious</td><td class="p-4 font-semibold">Bakti Sosial Panti</td><td class="p-4 text-xs text-slate-600">Memberi santunan dan kajian untuk anak-anak panti asuhan.</td><td class="p-4 text-xs">1 kali/kepengurusan</td><td class="p-4 text-xs">Febrian & Ananda</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Sahur on the Road</td><td class="p-4 text-xs text-slate-600">Membantu masyarakat yang membutuhkan di saat bulan puasa.</td><td class="p-4 text-xs">Bulan Puasa</td><td class="p-4 text-xs">Anjani & Tahta</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Buka Bersama FSET</td><td class="p-4 text-xs text-slate-600">Mempererat silaturahmi mahasiswa FSET lintas prodi dan dosen.</td><td class="p-4 text-xs">Bulan Puasa</td><td class="p-4 text-xs">Ananda Virginia</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Buka Bersama Prodi SI</td><td class="p-4 text-xs text-slate-600">Buka puasa bersama khusus keluarga mahasiswa Program Studi SI & dosen.</td><td class="p-4 text-xs">Bulan Puasa</td><td class="p-4 text-xs">Meylani & Afifah</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Relawan Mengajar</td><td class="p-4 text-xs text-slate-600">Mengajar anak-anak TPA/TPQ saat bulan puasa.</td><td class="p-4 text-xs">Bulan Puasa</td><td class="p-4 text-xs">Syira & Gusnita</td></tr>
+
+                <!-- ORGANIZATIONAL DEVELOPMENT -->
+                <tr class="hover:bg-slate-50"><td class="p-4 font-bold text-indigo-900" rowspan="7">Organizational Development</td><td class="p-4 font-semibold">Korsa, Jersey & Merchandise</td><td class="p-4 text-xs text-slate-600">Pembuatan atribut identitas resmi mahasiswa Sistem Informasi.</td><td class="p-4 text-xs">1 Periode</td><td class="p-4 text-xs">Dedi & Ikmal</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Makrab Pengurus</td><td class="p-4 text-xs text-slate-600">Mempererat keharmonisan dan kekompakan antar pengurus HIMSI.</td><td class="p-4 text-xs">Maret</td><td class="p-4 text-xs">Faiz & Yumna</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Makrab Hima / Maba</td><td class="p-4 text-xs text-slate-600">Memperkenalkan maba kepada angkatan atas dan dunia perkuliahan SI.</td><td class="p-4 text-xs">1 Periode</td><td class="p-4 text-xs">Faiz & Yumna</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Penyambutan Maba</td><td class="p-4 text-xs text-slate-600">Menyambut kedatangan mahasiswa baru angkatan 2026.</td><td class="p-4 text-xs">1 Tahun sekali</td><td class="p-4 text-xs">Hafiz & Ikmal</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Dies Natalis HIMSI</td><td class="p-4 text-xs text-slate-600">Perayaan hari ulang tahun HIMSI.</td><td class="p-4 text-xs">1 Tahun sekali</td><td class="p-4 text-xs">Hanafi & Ikmal</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Bazar</td><td class="p-4 text-xs text-slate-600">Penjualan makanan, minuman, dan merchandise pada event tertentu.</td><td class="p-4 text-xs">2 kali/tahun</td><td class="p-4 text-xs">Yumna & Abdul</td></tr>
+                <tr class="hover:bg-slate-50"><td class="p-4 font-semibold">Himsi Holiday</td><td class="p-4 text-xs text-slate-600">Acara jalan-jalan bareng mahasiswa SI agar semakin akrab.</td><td class="p-4 text-xs">1 Tahun sekali</td><td class="p-4 text-xs">Hanafi & Hanif</td></tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- JAVASCRIPT SEDERHANA UNTUK PERPINDAHAN MENU -->
+  <script>
+    function showPage(pageName) {
+      // Sembunyikan semua section halaman
+      document.getElementById('page-home').classList.add('hidden');
+      document.getElementById('page-pengurus').classList.add('hidden');
+      document.getElementById('page-proker').classList.add('hidden');
+
+      // Tampilkan section halaman yang dipilih
+      document.getElementById('page-' + pageName).classList.remove('hidden');
+
+      // Reset style tombol navigasi
+      const buttons = document.querySelectorAll('.nav-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-indigo-600', 'text-white');
+        btn.classList.add('text-indigo-200');
+      });
+
+      // Highlight tombol yang aktif
+      const activeBtn = document.getElementById('btn-' + pageName);
+      activeBtn.classList.add('bg-indigo-600', 'text-white');
+      activeBtn.classList.remove('text-indigo-200');
+    }
+  </script>
+</body>
+</html>
